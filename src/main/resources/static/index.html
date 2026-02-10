@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 ABC College AI Chatbot</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="chat-container">
+        
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="bot-avatar">🎓</div>
+                    <div class="header-info">
+                        <h1 class="header-title">ABC College AI Assistant</h1>
+                        <p class="header-subtitle">Ask me anything about the college!</p>
+                    </div>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Welcome Message -->
+            <div class="message bot-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>Hey there! 👋 I'm your ABC College AI assistant.</p>
+                        <p>I can help you with:</p>
+                        <ul>
+                            <li>📚 Courses and programs</li>
+                            <li>🎯 Admissions process</li>
+                            <li>💼 Placement information</li>
+                            <li>🏛️ Campus facilities</li>
+                            <li>📞 Contact details</li>
+                        </ul>
+                        <p>What would you like to know? 😊</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="message-avatar">🤖</div>
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <form class="chat-input-form" id="chatForm">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="userInput" 
+                    placeholder="Ask about courses, admissions, placements..."
+                    maxlength="300"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="send-button" id="sendButton">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+            <div class="input-hint">
+                <span class="char-count" id="charCount">0/300</span>
+                <span class="hint-text">💡 Try: "What courses are offered?"</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions (Optional suggestions) -->
+    <div class="quick-actions" id="quickActions">
+        <button class="quick-action-btn" data-question="What courses are offered?">
+            📚 Courses
+        </button>
+        <button class="quick-action-btn" data-question="How is the placement record?">
+            💼 Placements
+        </button>
+        <button class="quick-action-btn" data-question="Tell me about campus facilities">
+            🏛️ Facilities
+        </button>
+        <button class="quick-action-btn" data-question="What is the admission process?">
+            🎯 Admissions
+        </button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

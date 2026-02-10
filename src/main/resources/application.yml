@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: College AI Chatbot
+
+# Google Gemini API Configuration
+gemini:
+  api:
+    # Get your free API key from: https://makersuite.google.com/app/apikey
+    # You can set this via environment variable: GEMINI_API_KEY
+    key: AIzaSyBQEV5drmIKl0pjdMOeffziQeqxR4qD8GQ
+    # Gemini API endpoint (using gemini-pro for free tier)
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
+
+# Logging configuration
+logging:
+  level:
+    com.college.chatbot: INFO
+    org.springframework.web: INFO
