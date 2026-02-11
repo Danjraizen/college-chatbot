@@ -12,7 +12,7 @@ gemini:
     # You can set this via environment variable: GEMINI_API_KEY
     key: AIzaSyBQEV5drmIKl0pjdMOeffziQeqxR4qD8GQ
     # Gemini API endpoint (using gemini-pro for free tier)
-    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
 
 # Logging configuration
 logging:
